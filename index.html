@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Would you like to be my Valentine?</h1>
+        <img src="cute.gif" alt="cutie">
+        <div class="buttons">
+            <button class="yes"><a href="home.html">Yes</a></button>
+            <a href="home.html"> <button class="no" onmouseover="changeText()">No</button></a>
+        </div>
+
+    </div>
+    <script>
+        // Get the button element
+  const button = document.querySelector('.no');
+
+// Store the original text content of the button
+const originalText = button.textContent;
+
+// Add event listeners for mouseenter and mouseleave
+button.addEventListener('mouseenter', function() {
+  // Change the text content of the button when hovered
+  button.textContent = 'Yes';
+});
+
+button.addEventListener('mouseleave', function() {
+  // Revert the text content of the button when the hover is removed
+  button.textContent = originalText;
+});
+    </script>
+</body>
+</html>
